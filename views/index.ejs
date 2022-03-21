@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto Pokedex</title>
+    <link rel="stylesheet" href="/css/index.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka&family=Signika+Negative:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img
+        src="https://www.pinclipart.com/picdir/big/527-5272683_logo-pokemon-clipart-clip-free-stock-pokemon-logo.png"
+        alt="Logo Pokemon"
+      />
+    </header>
+    <main>
+      <% pokedex.forEach(element => { %>
+        <a href="/detalhes/<%=element.id%> ">
+        <div class="pokemon-card">
+          <div class="header">
+            <span class="ID"> Id: <%=element.id %> </span>
+            <span class="NUMBER">Number <%=element.num%> </span>
+          </div>
+          <div class="main">
+            <img src="<%=element.img %>" alt="<%=element.name %>" />
+            <span> <%=element.name %> </span>
+          </div>
+          <div class="footer"> <%=element.type %> </div>
+        </div>
+      </a>
+      <%})%>
+    </main>
+  </body>
+</html>

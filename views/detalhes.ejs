@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/detalhes.css" type="text/css">
+    <title>Detalhes</title>
+</head>
+<body>
+    <main> 
+        <% pokemonEscolhido.forEach(element => { %>
+            <div class="pokemon-card">
+                <div class="header">
+                    <span class="ID"> Id: <%=element.id %> </span>
+                    <span class="NUMBER">Number <%=element.num%> </span>
+                </div>
+                <div class="main">
+                    <img src="<%=element.img %>" alt="<%=element.name %>" />
+                    <span> <%=element.name %> </span>
+                    <span> <b>Height:</b> <%=element.height%></span>
+                    <span> <b>Weight:</b> <%=element.weight%></span>
+                    <span> <b>Weaknesses:</b> <%= element.weaknesses%></span>
+                </div>
+                <div class="footer"> <%=element.type %> </div>
+            </div>
+            <%})%>
+        </main>
+</body>
+</html>
